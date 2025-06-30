@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>유아임용 필수 암기 (By 오르다꿈)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .index-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #112D4E 0%, #3F72AF 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .main-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .by-line {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+            margin-top: -10px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 40px;
+        }
+        
+        .quiz-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid #f0f0f0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quiz-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .quiz-card:hover::before {
+            left: 100%;
+        }
+        
+        .quiz-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #3F72AF;
+        }
+        
+        .quiz-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .quiz-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .quiz-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .quiz-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .quiz-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 36px;
+            }
+            
+            .quiz-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+            
+            .quiz-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="index-container">
+        <div class="header">
+            <div class="header-content">
+                <div class="main-title">🎓 유아임용 필수 암기</div>
+                <div class="by-line">(By 오르다꿈)</div>
+                <div class="subtitle">* PC 전용 사이트입니다.<br/>* 개인용도로만 사용하시길 바랍니다.<br/>* 어떤방식으로든지의 복제 및 유출을 금지합니다.</div>
+            </div>
+        </div>
+        
+        <div class="quiz-grid">
+            <div class="quiz-card" onclick="openQuiz('nuri')">
+                <div class="quiz-icon">🎯</div>
+                <div class="quiz-title">2019 개정 누리과정 고시문</div>
+                <div class="quiz-description">
+                    누리과정 총론, 신체운동·건강, 의사소통,<br/>사회관계, 예술경험, 자연탐구 영역
+                </div>
+                <div class="quiz-button">시작하기</div>
+            </div>
+            
+            <div class="quiz-card" onclick="openQuiz('child')">
+                <div class="quiz-icon">🛡️</div>
+                <div class="quiz-title">아동복지법</div>
+                <div class="quiz-description">
+                    제28조 별표6 교육기준(제28조제1항 관련)
+                </div>
+                <div class="quiz-button">시작하기</div>
+            </div>
+            
+            <div class="quiz-card" onclick="openQuiz('safety')">
+                <div class="quiz-icon">⚡</div>
+                <div class="quiz-title">7대안전</div>
+                <div class="quiz-description">
+                    별표 1 학년별 학생안전교육의 시간 및 횟수,<br/>별표 2 학생 안전교육 내용 및 방법
+                </div>
+                <div class="quiz-button">시작하기</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            이 프로그램은 유아교육 전문가를 위한 학습 도구입니다.<br/>
+            Copyright © 출판사 오르다꿈. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function openQuiz(type) {
+            let filename = '';
+            switch(type) {
+                case 'nuri':
+                    filename = 'nuri.html';
+                    break;
+                case 'child':
+                    filename = 'child.html';
+                    break;
+                case 'safety':
+                    filename = 'safety.html';
+                    break;
+            }
+            
+            if (filename) {
+                // 새 탭에서 열기
+                window.open(filename, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
