@@ -262,7 +262,8 @@
 </div>
 <script>
         function handleEnter(event, input) {
-            if (event.key === 'Enter' || event.keyCode === 13) {
+            if (event.key === 'Enter' || event.keyCode === 13 || event.which === 13) {
+                event.preventDefault();
                 checkAnswer(input);
             }
         }
